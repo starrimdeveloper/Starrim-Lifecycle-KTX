@@ -178,7 +178,7 @@ class MainActivity : AppCompatActivity() {
 
 }
 ```
-注意! 不要在 *AppCompatActivity.OnDestroy()*方法中使用 ViewBinding！可能会导致程序崩溃
+注意! 不要在 *AppCompatActivity.OnDestroy()* 方法中使用 ViewBinding！可能会导致程序崩溃
 
 ### ViewModel with LifecycleObserver（实现了 LifecycleObserver 的 ViewModel）
 > 如果要使用这些方法，**你的 ViewModel 必须实现 LifecycleObserver接口 或者 DefaultLifecycleBoserver接口**
