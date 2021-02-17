@@ -6,9 +6,11 @@ This extension is my first public project. I will take the high school entrance 
 <br>
 
 我是Starrim，一个16岁（2021年）的中国学生！我的英语太菜了所以有的文档可能写的不是很好。但是不要太注意啦！（被打）
-<br>这个扩展是我的第一次公开项目尝试。因为6月份要中考了所以可能不会有足够的时间去维护这个项目。但是大家都可以 Fork 这个项目来用，也可以帮助我改进这个项目鸭！
-<br>如果在用的过程中遇到了啥问题可以给我 **发邮件** 或者 **在这里的 Issues 或者 Discussions 讨论**，只要看到我都会处理的！
+<br>这个扩展是我的第一次公开项目尝试。因为6月份要中考了所以可能不会有足够的时间去维护这个项目。但是大家都可以 Fork 这个项目来用，也可以帮助我改进这个项目！
+<br>如果在用的过程中遇到了啥问题可以给我 **发邮件** 或者 **在这里的 Issues 或者 Discussions 讨论**，只要看到我都会处理
 > E-mall address: **starrim0725@163.com**
+
+Developer Starrim 2021-2-17
 
 ## 1.Introduction
 This is an extension of Android Lifecycle, which can help developers use Lifecycle easily. 
@@ -205,7 +207,7 @@ class MainActivity : AppCompatActivity() {
     private val model by viewModelWithObserver<MainViewModel>()
     // 然后你就能在这个Activity里面使用你的 ViewModel了
     // 这个 ViewModel 是一个 Lifecycle Observer
-    // 能够根据你编写的逻辑在 Activity 状态变化的时候执行你定义的逻辑
+    // 能够根据你的编程在 Activity 状态变化的时候执行你定义的逻辑
 }
 ```
 
