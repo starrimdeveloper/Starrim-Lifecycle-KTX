@@ -2,7 +2,7 @@
 I'm Starrim, a 16-year-old(in 2021) student in Chinese. My English isn't very well so the document may not be very good. Don't care too much!(smile)<br>
 This extension is my first public project. I will take the high school entrance exam in June, 2021 so I may not have enough time to fix bugs and improve code.
 <br> **Everyone** can fork this extension! 
-<br> When you find any bugs or want to give me any suggestions, Welcome send me **E-mall** or **discuss** here!
+<br> When you find any bugs or want to give me any suggestions, send me **E-malls** or **discuss** here!
 <br>
 
 我是Starrim，一个16岁（2021年）的中国学生！我的英语太菜了所以有的文档可能写的不是很好。但是不要太注意啦！（被打）
@@ -10,7 +10,12 @@ This extension is my first public project. I will take the high school entrance 
 <br>如果在用的过程中遇到了啥问题可以给我 **发邮件** 或者 **在这里的 Issues 或者 Discussions 讨论**，只要看到我都会处理
 > E-mall address: **starrim0725@163.com**
 
-Developer Starrim 2021-2-17
+Developer **Starrim**, 2021-2-17
+
+### Pay attention:
+Only **Kotlin** project can use it because this project provides lots of Delegate(in Kotlin). Sorry Java developers!!
+### 使用前请注意:
+只有 **Kotlin** 项目才能使用这个扩展，因为在很多地方用到了 Kotlin 的委托，对不起啦 Java 开发者们（Java 没有委托属性）
 
 ## 1.Introduction
 This is an extension of Android Lifecycle, which can help developers use Lifecycle easily. 
@@ -65,7 +70,43 @@ Most of functions in this extension are **only use ONE property**！
 ```
 #### 本扩展的**绝大多数方法**都像这样，**只需要一行代码**解决！
 
-## 2.Usage
+## 2.How to get it
+Firstly, add a repository in your **root** build.gradle（Thanks to **jitpack.io**!)
+```groovy
+    allprojects {
+        repositories {
+            //······
+            maven { url 'https://jitpack.io' }
+        }
+    }
+```
+Then, add its dependency in your **model** build.grade
+```groovy
+    dependencies {
+        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:0.0.1'
+    }
+```
+OK! Now you can use this extension in your project!
+
+## 2.怎么引用
+首先添加一个仓库地址在你 **项目文件夹下的** build.gradle（谢谢 **jitpack.io** 提供发布服务!)
+```groovy
+    allprojects {
+        repositories {
+            //······
+            maven { url 'https://jitpack.io' }
+        }
+    }
+```
+然后 把这段依赖添加到 **你要用到这个扩展的模块下的** build.grade
+```groovy
+    dependencies {
+        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:0.0.1'
+    }
+```
+好了！现在你就能够享受扩展为你带来的便利了！
+
+## 3.Usage
 **Pay Attention! Only Kotlin project can use the extensions!** (Sorry Java developer!!)<br>
 If you want to use Lifecycle Starrim-Extensions, be sure that you're using **Kotlin, AndroidX and AppCompat**(Lifecycle require these support) and **configure Lifecycle features** according to Google Documents.<br>
 Although these samples are in Activity, **functions of Fragment are similar to them!**
@@ -154,7 +195,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-## 2.使用
+## 3.使用
 **注意，只有 Kotlin 才能使用这些扩展（因为要用到属性委托）** (对不起了Java人)<br>
 如果你要用这些扩展, 请保证你的项目正在使用用 **Kotlin, AndroidX 和 AppCompat**(Lifecycle 需要这些组件) 并且按照官方的教程 **配置好Gradle** <br>
 尽管下面的示例都是关于 Activity 的, **但Fragment的方法基本上也是一样的**
