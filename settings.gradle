@@ -1,0 +1,3 @@
+rootProject.name = "Starrim Lifecycle KTX"
+include ':app'
+include ':lifecycleKtx'

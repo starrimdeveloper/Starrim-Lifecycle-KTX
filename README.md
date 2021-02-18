@@ -114,7 +114,9 @@ val model by viewModelWithObserver<XXXViewModel>()
 Sample:
 ```kotlin
 // Your ViewModel shoud be similar to that:
-class MainViewModel: ViewModel(), LifecycleObserver {//......}
+class MainViewModel: ViewModel(), LifecycleObserver {
+    //......
+}
 
 class MainActivity : AppCompatActivity() {
     // Set ViewModel with LivecycleObserver here as following:
@@ -141,7 +143,9 @@ val model by viewModel<XXXViewModel>()
 Sample:
 ```kotlin
 // Your ViewModel shoud be similar to that:
-class MainViewModel: ViewModel() {//......}
+class MainViewModel: ViewModel() {
+    //......
+}
 
 class MainActivity : AppCompatActivity() {
     // Set ViewModel with LivecycleObserver here as following:
@@ -200,7 +204,9 @@ val model by viewModelWithObserver<XXXViewModel>()
 示范:
 ```kotlin
 // 你的 ViewModel 应该像这样:
-class MainViewModel: ViewModel(), LifecycleObserver { //你自己定义的其他逻辑 }
+class MainViewModel: ViewModel(), LifecycleObserver {
+    //你自己定义的其他逻辑 
+}
 
 class MainActivity : AppCompatActivity() {
     // 像这样设置好你的 ViewModel:
@@ -229,7 +235,9 @@ val model by viewModel<XXXViewModel>()
 示范:
 ```kotlin
 // 你的 ViewModel 应该像这样:
-class MainViewModel: ViewModel() {//......}
+class MainViewModel: ViewModel() {
+    //......
+}
 
 class MainActivity : AppCompatActivity() {
    
