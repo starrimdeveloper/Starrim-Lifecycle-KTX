@@ -83,7 +83,7 @@ Firstly, add a repository in your **root** build.gradle（Thanks to **jitpack.io
 Then, add its dependency in your **model** build.grade
 ```groovy
     dependencies {
-        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:Tag'
+        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:0.0.1'
     }
 ```
 OK! Now you can use this extension in your project!
