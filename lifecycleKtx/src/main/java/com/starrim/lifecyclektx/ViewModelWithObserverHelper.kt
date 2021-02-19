@@ -4,7 +4,7 @@ import androidx.lifecycle.*
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
-class ViewModelWithObserverHelper<VM,OWNER>(owner:OWNER, vm:Class<VM>) :ReadOnlyProperty<Any?,VM>
+class ViewModelWithObserverHelper<VM,OWNER> internal constructor(owner:OWNER, vm:Class<VM>) :ReadOnlyProperty<Any?,VM>
         where VM:ViewModel,VM:LifecycleObserver, OWNER:LifecycleOwner,OWNER:ViewModelStoreOwner {
 
     private val model by lazy { ViewModelProvider(owner).get(vm) }

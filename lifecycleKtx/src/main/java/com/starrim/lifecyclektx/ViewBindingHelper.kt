@@ -10,7 +10,7 @@ import kotlin.reflect.KProperty
 
 @Suppress("UNCHECKED_CAST")
 @MainThread
-class ViewBindingHelper<VB: ViewBinding>(activity: AppCompatActivity, clazz: Class<VB>): ReadOnlyProperty<Any?, VB?> {
+class ViewBindingHelper<VB: ViewBinding> internal constructor(activity: AppCompatActivity, clazz: Class<VB>): ReadOnlyProperty<Any?, VB?> {
 
     private val binding by lazy {
         // Get the static function : <ViewBinding>.inflate(LayoutInflater) -> <ViewBinding>
