@@ -7,7 +7,7 @@ import androidx.lifecycle.*
 import androidx.viewbinding.ViewBinding
 // Created by Starrim on 2021-2-17
 
-/** 2 functions for View Binding Delegates: (ONLY in AppCompatActivity)
+/** 2 functions for View Binding Delegates: (in AppCompatActivity)
  *
  * BE SURE that the bindings are used after ON_CREATE and before ON_DESTROY.
  * @see ViewBindingHelper
@@ -15,7 +15,7 @@ import androidx.viewbinding.ViewBinding
  *
  */
 fun <VB:ViewBinding> AppCompatActivity.viewBinding(clazz: Class<VB>)
-        = ViewBindingHelper(this,clazz)
+        = ActivityViewBindingHelper(this,clazz)
 inline fun <reified VB:ViewBinding> AppCompatActivity.viewBinding()
         = viewBinding(VB::class.java)
 
