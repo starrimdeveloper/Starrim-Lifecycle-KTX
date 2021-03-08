@@ -22,12 +22,16 @@ This is an extension of Android Lifecycle, which can help developers use Lifecyc
 <br>It will reduce most of Boilerplate Code in your Kotlin Project.
 <br>For example, This is the code to use ViewBinding in your Activity:
 ```kotlin
+    // Boilerplate Code 1
     private lateinit var binding: ResultProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle) {
         super.onCreate(savedInstanceState)
+        // Boilerplate Code 2
         binding = ResultProfileBinding.inflate(layoutInflater)
+        // Boilerplate Code 3
         val view = binding.root
+        // Boilerplate Code 4
         setContentView(view)
     }
 ```
@@ -49,11 +53,16 @@ Most of functions in this extension are **only use ONE property**！
 <br>它能够减少绝大多数样板代码的使用
 <br>例如, 这是一段来自官方的 ViewBinding 使用实例代码:
 ```kotlin
+    // 样板代码1
     private lateinit var binding: ResultProfileBinding
+    
     override fun onCreate(savedInstanceState: Bundle) {
         super.onCreate(savedInstanceState)
+        // 样板代码2
         binding = ResultProfileBinding.inflate(layoutInflater)
+        // 样板代码3
         val view = binding.root
+        // 样板代码4
         setContentView(view)
     }
 ```
@@ -71,38 +80,24 @@ Most of functions in this extension are **only use ONE property**！
 #### 本扩展的**绝大多数方法**都像这样，**只需要一行代码**解决！
 
 ## 2.How to get it
-Firstly, add a repository in your **root** build.gradle（Thanks to **jitpack.io**!)
+Firstly, download its source and **import** the folder name *lifecycleKtx* as a **model** in your project.<br>
+Then, implement the dependency in your **model** build.gradle (such as app/ where you **need to use the extension** **as following:**
 ```groovy
-    allprojects {
-        repositories {
-            //······
-            maven { url 'https://jitpack.io' }
-        }
-    }
-```
-Then, add its dependency in your **model** build.grade
-```groovy
-    dependencies {
-        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:0.0.1'
-    }
+dependencies {
+    //......
+    implementation project(':lifecycleKtx')
+}
 ```
 OK! Now you can use this extension in your project!
 
 ## 2.怎么引用
-首先添加一个仓库地址在你 **项目文件夹下的** build.gradle（谢谢 **jitpack.io** 提供发布服务!)
+首先把本项目的源代码下载下来（推荐下载release里面的zip），并且 **作为一个模块导入** 到你自己的项目里面。<br>
+然后**像下面这样**在你需要用到扩展的模块里面**引用依赖**
 ```groovy
-    allprojects {
-        repositories {
-            //······
-            maven { url 'https://jitpack.io' }
-        }
-    }
-```
-然后 把这段依赖添加到 **你要用到这个扩展的模块下的** build.grade
-```groovy
-    dependencies {
-        implementation 'com.github.starrimdeveloper:Starrim-Lifecycle-KTX:0.0.1'
-    }
+dependencies {
+    //......
+    implementation project(':lifecycleKtx')
+}
 ```
 好了！现在你就能够享受扩展为你带来的便利了！
 
